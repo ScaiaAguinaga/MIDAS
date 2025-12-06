@@ -62,7 +62,9 @@
 
       <!-- Sentiment -->
       <div class="sec sentiment">
-        <span class="label" data-tooltip="<strong>Sentiment</strong><br>FinBERT news tone (FR-3).">Sent</span>
+        <span class="label" data-tooltip="<strong>Sentiment</strong><br>FinBERT news tone (FR-3).
+                      <br><u>Sentiment Score: </u>positive = bullish lean, negative = earish
+                      <br><u>Sentiment Volatility (σ): </u> standard deviation of sentiment over time, how volatile or stable sentiment has been.">Sent</span>
         <span class="val" id="sent">—</span>
         <span class="sigma" id="sigma">σ—</span>
       </div>
@@ -70,7 +72,12 @@
 
       <!-- Strategy -->
       <div class="sec strat"
-           data-tooltip="<strong>Strategy Suggestion</strong><br>Class + model confidence.">
+           data-tooltip="<strong>Strategy Suggestion</strong><br>Class + model confidence.
+                      <br><u>No Action (Passive): </u>Hold your position, with no trades.
+                      <br><u>Iron Condor (Neutral, Low Volatility): </u>Gain profit if the price stays in a set range.
+                      <br><u>Debit Call Spread: </u>Bullish (optimistic) bet on a moderate rise. 
+                      <br><u>Debit Put Spread: </u>Bearish (pessimistic) bet on a moderate drop.
+                      <br><u>Covered Call: </u>Earn income by selling (writing) a call option on shares you own. ">
         <span class="badge" id="strat">NA</span>
         <span class="conf"><span class="bar" id="bar"></span><span id="conf">—</span></span>
       </div>
